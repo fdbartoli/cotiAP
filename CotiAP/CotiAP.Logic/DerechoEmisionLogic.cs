@@ -7,7 +7,7 @@ using CotiAP.Entities;
 
 namespace CotiAP.Logic
 {
-    internal class DerechoEmisionLogic : BaseLogic, IABMLogic<DerechoEmision>
+    public class DerechoEmisionLogic : BaseLogic, IABMLogic<DerechoEmision>
     {
         public List<DerechoEmision> GetAll()
         {

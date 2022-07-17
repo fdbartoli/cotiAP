@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotiAP.Logic", "CotiAP.Logi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotiAP.Entities", "CotiAP.Entities\CotiAP.Entities.csproj", "{A1DFE82D-E95A-4DCD-B79F-BCFA9999556B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CotiAP.WebAPI", "CotiAP.WebAPI\CotiAP.WebAPI.csproj", "{93E64932-7C55-454E-BF42-C7791FF4C7EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A1DFE82D-E95A-4DCD-B79F-BCFA9999556B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DFE82D-E95A-4DCD-B79F-BCFA9999556B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1DFE82D-E95A-4DCD-B79F-BCFA9999556B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E64932-7C55-454E-BF42-C7791FF4C7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E64932-7C55-454E-BF42-C7791FF4C7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E64932-7C55-454E-BF42-C7791FF4C7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E64932-7C55-454E-BF42-C7791FF4C7EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

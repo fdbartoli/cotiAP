@@ -7,7 +7,7 @@ using CotiAP.Entities;
 
 namespace CotiAP.Logic
 {
-    internal class DescuentoLogic : BaseLogic, IABMLogic<Descuento>
+    public class DescuentoLogic : BaseLogic, IABMLogic<Descuento>
     {
         public void Add(Descuento newItem)
         {
