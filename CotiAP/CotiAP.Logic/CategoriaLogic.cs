@@ -25,6 +25,18 @@ namespace CotiAP.Logic
 
         }
 
+        public Categoria GetOneById (int id)
+        {
+            try
+            {
+                return context.Categoria.FirstOrDefault(c => c.IdCategoria == id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void Add(Categoria newCategoria)
         {
             try

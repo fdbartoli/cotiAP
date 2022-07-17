@@ -36,5 +36,26 @@ namespace CotiAP.WebAPI.Controllers
             }
         }
 
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                Categoria categoria = categoriaLogic.GetOneById(id);
+                CategoriaRequest categoriaResponse = new CategoriaRequest
+                {
+                    IdCategoria = categoria.IdCategoria,
+                    numeroCategoria = categoria.numeroCategoria,
+                    tasa = categoria.tasa,
+                    tasaAsitencia = categoria.tasaAsitencia,
+                };
+                return Ok(categoriaResponse);
+            }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+
     }
 }

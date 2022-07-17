@@ -34,5 +34,24 @@ namespace CotiAP.WebAPI.Controllers
             }
         }
 
+        public IHttpActionResult Get (int id)
+        {
+            try
+            {
+                Condicion condicion = logic.GetOneById(id);
+                CondicionRequest condicionResponse = new CondicionRequest
+                {
+                    idCondicion = condicion.idCondicion,
+                    nombre = condicion.nombre,
+                    tasa = condicion.tasa,
+                };
+                return Ok(condicionResponse);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
     }
 }

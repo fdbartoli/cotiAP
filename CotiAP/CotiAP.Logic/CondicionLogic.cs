@@ -48,6 +48,19 @@ namespace CotiAP.Logic
             }
         }
 
+
+        public Condicion GetOneById (int id)
+        {
+            try 
+            { 
+            return context.Condicion.FirstOrDefault(c => c.idCondicion == id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void Update(Condicion condicion)
         {
             try
