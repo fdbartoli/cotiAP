@@ -32,11 +32,27 @@ namespace CotiAP.WebAPI.Controllers
             catch (Exception)
             {
                 return BadRequest();
-            }
-
-
-            
+            }            
         }
 
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                DerechoEmision derechoEmision = logic.GetOneById(id);
+                DerechoEmisionRequest derechosEmisionResponse = new DerechoEmisionRequest
+                {
+                    idDerechoEmision = derechoEmision.idDerechoEmision,
+                    nombreDerechoEmision = derechoEmision.nombreDerechoEmision,
+                    valor = derechoEmision.valor
+                };
+
+                return Ok(derechosEmisionResponse);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

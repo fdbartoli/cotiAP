@@ -23,6 +23,18 @@ namespace CotiAP.Logic
 
         }
 
+        public DerechoEmision GetOneById(int id)
+        {
+            try
+            {
+                return context.DerechoEmision.FirstOrDefault(d => d.idDerechoEmision == id);
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
         public void Add(DerechoEmision newDerechoEmision)
         {
             try

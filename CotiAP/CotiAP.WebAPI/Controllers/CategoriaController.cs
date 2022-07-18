@@ -56,6 +56,69 @@ namespace CotiAP.WebAPI.Controllers
             }
         }
 
+        public IHttpActionResult Post([FromBody] CategoriaRequest categoriaRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                Categoria categoria = new Categoria
+                {
+                    numeroCategoria = categoriaRequest.numeroCategoria,
+                    tasa = categoriaRequest.tasa,
+                    tasaAsitencia = categoriaRequest.tasaAsitencia
+                };
+
+                categoriaLogic.Add(categoria);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
+        }
+
+        public IHttpActionResult Patch([FromBody] CategoriaRequest categoriaRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                Categoria categoria = new Categoria
+                {
+                    numeroCategoria = categoriaRequest.numeroCategoria,
+                    tasa = categoriaRequest.tasa,
+                    tasaAsitencia = categoriaRequest.tasaAsitencia
+                };
+                categoriaLogic.Update(categoria);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        public IHttpActionResult Delete (int id)
+        {
+            try
+            {
+                categoriaLogic.Delete(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
 
     }
 }
